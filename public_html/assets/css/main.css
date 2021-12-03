@@ -1,0 +1,750 @@
+@charset "utf-8";
+
+/* ---------------------------- 공통클래스 ---------------------------- */
+.main_title_wrap{ 
+    width: 100%; 
+    display: block; 
+    margin: 0 auto; 
+    color: #1c1c1c;
+    text-align: center;
+}
+.water_mark{ 
+    text-align: center; 
+    display: block;
+    margin-bottom: 30px;
+}
+.water_mark img{ text-align: center; }
+.main_title{ 
+    font-size: 4rem; 
+    font-weight: 400;  
+}
+.main_title b{ font-weight: 700; }
+.main_title_wrap h4{ 
+    font-size: 2.8rem; 
+    font-weight: 700; 
+    line-height: 2;
+}
+.main_title_wrap p{ 
+    font-size: 1.8rem;
+    display: block;
+    line-height: 1.6;
+}
+
+/* ---------------------------- Layout ---------------------------- */
+.main_02 .inner_container,.main_03 .inner_container,
+.main_04 .inner_container,.main_05 .inner_container{ padding-top: 9%; }
+
+
+
+/* Pageable 가로스크롤 없애기 */
+.pg-wrapper, .pg-vertical{ overflow-y:  hidden !important;}
+.pg-pips ul li{ margin: 30px 15px !important; }
+.pg-pips ul li a.active, .pg-pips ul li:hover a.active {
+    margin: -15px 0 0 -11px !important;
+}
+.pg-pips ul li a.active, .pg-pips ul li:hover a.active{
+    width: 28px !important;
+    height: 34px !important;
+    display: block;
+    background: url('/assets/images/icon_water.png') no-repeat center center;
+} 
+.index .point_b{ color: #2377cc; }
+.pg-vertical .pg-pips { right: 100px !important; }
+.pg-pips ul li a{ 
+    width: 8px !important; 
+    height: 8px !important; 
+    margin: 0 !important;
+    transition: all 0.3s ease-in-out !important;   
+}
+
+.pg-pips ul li:hover a {
+    transform: scale(1.3);
+}
+
+
+
+
+
+/* ---------------------------- Main_01 ---------------------------- */
+.main_01{ position: relative;}
+/* swiper slider css 재선언 */
+.swiper-container .swiper-notification{ z-index: 100 !important; }
+.swiper-container-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-custom, .swiper-pagination-fraction{ 
+    bottom: 30% !important; /* 페이지네이션 위치 */
+    left: -33.5% !important; /* 페이지네이션 위치 */
+    overflow-y: hidden !important;
+}
+/* 페이지네이션 불렛 css */
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+    z-index: 500 !important;
+    display: inline-block !important;
+    width: 42px !important;
+    height: 8px !important;
+    background: #ccced2 !important;
+    transition: .3s !important;
+    margin-right: 11px !important;    
+}
+/* active 시 불렛색상 변경 */
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active{ 
+    background-color: #2377cc !important;
+}
+
+.main_01 .main_slider{ width: 100%; height: 100%; }
+.main_01 .main_slider .swiper-slide:nth-child(even){
+    display: block;
+    background: url('/assets/images/bg_main_01_slide_1.png') no-repeat center 0;
+}
+.main_01 .main_slider .swiper-slide:nth-child(odd){
+    display: block;
+    background: url('/assets/images/bg_main_01_slide_2.png') no-repeat center 0;
+}
+
+.main_slider .slide_content{ 
+    padding-top: 17%; 
+    color: #4e4e4e;
+}
+.main_slider .slide_content_w{
+    color: #fff;
+}
+.main_slider .slide_content h2{
+    font-size: 6rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.main_slider .slide_content h2 b{ font-weight: 700; }
+.main_slider .slide_content h3{
+    font-size: 4rem;
+    font-weight: 500;
+}
+.main_slider .slide_content span{
+    font-size: 2.8rem;
+    font-weight: 300;
+    line-height: 3;
+}
+
+.main_01 .water_mark{ 
+    position: absolute; 
+    bottom: 222px; 
+    right: 418px; 
+    z-index: 50; 
+    cursor: pointer; 
+    transition:all 0.8s;
+}
+.main_01 .water_mark.active{  bottom: 50px; right: 418px; }        
+.main_01 .water_mark .water_icon{             
+    width: 59px; 
+    height: 70px; 
+    display: block; 
+    background: url('/assets/images/img_water.png') no-repeat center center; 
+}
+.main_01 .water_mark .bullet{ 
+    width: 24px; 
+    height: 15px;
+    display: block; 
+    background: url('/assets/images/icon_down.png') no-repeat center center;
+    margin: 0 auto;
+}
+.main_01 .water_mark.active .bullet{ 
+    background: url('/assets/images/icon_up.png') no-repeat center center; 
+}
+.main_01 .folding{ 
+    width: 100%; 
+    height: 244px; 
+    display: block; 
+    background: url('/assets/images/bg_intro_banner.png') no-repeat center center; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    color: #fff;
+    z-index: 49;
+}
+.main_01 .folding .inner_container{ padding-top: 100px; }
+.main_01 .folding .inner_container div{ cursor: pointer; }
+.main_01 .folding span{    
+    font-weight: 400;
+    font-size: 2.8rem;
+    display: block;
+}
+.main_01 .folding h3{
+    font-size: 3.6rem ;
+    font-weight: 900;
+    display: inline-block;
+}
+.main_01 .folding img{
+    display: inline-block;
+}
+
+/* ---------------------------- Main_02 ---------------------------- */
+.main_02{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url('/assets/images/bg_main_02.png') no-repeat center center;
+}
+.main_02 .main_title_wrap{ margin-bottom: 80px; }
+.main_02_list{ width: 100%; }
+.main_02_list li{ 
+    width: 24%; 
+    display: inline-block;
+    text-align: center;
+    transition: .3s;
+    position: relative;
+}
+.main_02_list li:hover{
+    top: -11px;
+}
+.main_02_list li .icon_box{
+    width: 150px;
+    height: 150px;
+    display: block;
+    border-radius: 50%;
+    background-color: #5791cc;
+    margin: 0 auto 60px;
+    position: relative;
+}
+.main_02_list li .icon_box::after{
+    content: '';
+    width: 190px;
+    height: 190px;
+    display: block;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #cac8c7;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.main_02_list li .icon_box img{
+    display: block;
+    margin: 0 auto;
+}
+.main_02_list li .main_02_list_title{
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin-bottom: 20px;
+}
+.main_02_list li p{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #4e4e4e;
+    display: block;
+    line-height: 1.7;
+}
+
+
+/* ---------------------------- Main_03 ---------------------------- */
+.main_03{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url('/assets/images/bg_main_03.png') no-repeat center center;
+}
+.tap_btn_wrap{
+    width: 32%;
+    display: block;
+    float: left;
+}
+.main_03 .water_mark{ 
+    text-align: left;
+    margin-bottom: 40px;
+}
+.main_03 .main_title{
+    text-align: left;
+    color: #1c1c1c;
+    margin-bottom: 10px;
+}
+.main_03 .tap_btn_wrap p{
+    width: 330px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: left;
+    color: #1c1c1c;
+    margin-bottom: 25px;
+}
+
+ul.tabs{
+    width: 330px;
+    display: block;
+    border-top: 1px solid #4e4e4e;
+}
+ul.tabs li{
+    display: block;
+    font-size: 1.8rem;
+    padding: 20px 0;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(78,78,78,0.3);
+    position: relative;
+    transition: .3s;
+}
+ul.tabs li::after{
+    content: '';
+    width: 23px;
+    height: 3px;
+    background-color: #dbdbdb;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 25px ;
+    transition: .3s;
+
+}
+ul.tabs li.current {
+    /* background: #ededed; */
+    color: #1c1c1c;
+    font-weight: 700;
+}
+ul.tabs li.current::after{
+    background-color: #5791cc;
+}
+.tab-content{
+    display: none;
+    /* background: #ededed; */
+    /* padding: 85px 0 85px 60px ; */
+    padding: 0 0 0 60px ;
+}
+
+.tab-content.current{
+    width: 68%;
+    float: inline-start;
+    display: inherit;
+    float: right;
+    text-align: center;
+    /* background-color: #5791cc; */
+}
+.tab_title{
+    font-size: 2.6rem ;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2 ;
+}
+.tab_content_p{
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #5d5d5d;
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+/* Tab01 - 발효주정 구입절차 */
+.main_03_01_list{ 
+    width: 100%; 
+    position: relative; 
+}
+.main_03_01_list li{
+    width: 35%;
+    height: 289px;
+    padding: 20px 0 0;
+    text-align: center;
+    background: url('/assets/images/img_block_business_bg.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+}
+.main_03_01_list li:nth-child(1){
+    left: 0;
+    top: 0;
+}
+.main_03_01_list li:nth-child(2){
+    right: 19%;
+    top: 0;
+}
+.main_03_01_list li:nth-child(3){
+    left: 23%;
+    top: 195px;
+}
+.main_03_01_list li:nth-child(4){
+    right: -4.2%;
+    top: 195px ;
+}
+.main_03_01_list li i{
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: normal;
+    color: #fff;
+    display: block;
+    margin-bottom: 25px ;
+}
+.main_03_01_list li span{
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #221814;
+    line-height: 1.2;
+    display: block;
+    margin-bottom: 30px;
+}
+.main_03_01_list li p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #221814;
+    line-height: 1.4;
+    display: block;
+    position: relative;
+}
+.main_03_01_list li p::after{
+    content: '';
+    width: 70%;
+    height: 1px;
+    background-color: #5990cc;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+/* Tab02 - 전국사무소, 소매업체 */
+.tab-content .intro_title{ 
+    display: block;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.8;
+    padding-left: 30px;
+    position: relative;
+}
+.tab-content .intro_title::after{
+    content: '';
+    width: 3px;
+    height: 18px;
+    background-color: #5990cc;
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 11px;
+}
+.main_03_02_list{ 
+    width: 100%; 
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.main_03_02_list li{
+    width: 22.4% ;    
+    height: 120px;
+    padding: 10px 20px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 20px 0 20px  0;
+    vertical-align: bottom;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    position: relative;
+}
+.main_03_02_list li span{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1c1c1c;
+    display: block;
+    margin-bottom: 10px;   
+}
+.main_03_02_list li::after{
+    content: '';
+    width: 80%;
+    height: 1px;
+    display: block;
+    background-color: #b9b9b9 ;
+    position: absolute;
+    left: 50%;
+    top: 42px;
+    transform: translate(-50%);
+}
+
+#tab-3 .tap_3_wrap{
+    height: 26vw;
+    overflow-y: auto;
+}
+#tab-3 .main_03_02_list li{
+    height: 170px;
+}
+
+/* ---------------------------- Main_04 ---------------------------- */
+.main_04{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url('/assets/images/bg_main_04.png') no-repeat center center;
+}
+
+
+.main_04 .water_mark{ 
+    text-align: left;
+    margin-bottom: 40px;
+}
+.main_04 .main_title{
+    text-align: left;
+    color: #1c1c1c;
+    margin-bottom: 10px;
+}
+.main_04 .tap_btn_wrap p{
+    width: 330px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: left;
+    color: #1c1c1c;
+    margin-bottom: 25px;
+}
+
+ul.tab_{
+    width: 330px;
+    display: block;
+    border-top: 1px solid #4e4e4e;
+}
+ul.tab_ li{
+    display: block;
+    font-size: 1.8rem;
+    padding: 20px 0;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(78,78,78,0.3);
+    position: relative;
+    transition: .3s;
+}
+ul.tab_ li::after{
+    content: '';
+    width: 23px;
+    height: 3px;
+    background-color: #dbdbdb;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 25px ;
+    transition: .3s;
+
+}
+ul.tab_ li.active {
+    /* background: #ededed; */
+    color: #1c1c1c;
+    font-weight: 700;
+}
+ul.tab_ li.active::after{
+    background-color: #5791cc;
+}
+
+.tab-contents{
+    display: none;
+    /* background: #ededed; */
+    padding: 85px 0 0 35px;
+}
+
+.tab-contents.active{
+    width: 68%;
+    float: inline-start;
+    display: inherit;
+    float: right;
+    text-align: center;
+    /* background-color: #5791cc; */
+}
+.tab_title{
+    font-size: 2.6rem ;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2 ;
+}
+.tab_content_p{
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #5d5d5d;
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.main_04_01_list li{
+    width: 285px;
+    height: 395px;
+    display: inline-block;
+    padding: 20px 47px;
+    margin: 0 1%;
+    text-align: center;
+    vertical-align: bottom;
+}
+.main_04_01_list li:nth-child(odd){
+    background: url('/assets/images/img_block_reference_bg_01.png') no-repeat center center;
+}
+.main_04_01_list li:nth-child(even){
+    background: url('/assets/images/img_block_reference_bg_02.png') no-repeat center center;
+}
+.main_04_01_list li span{
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #fff;
+    display: block;
+    margin-top: 80px ;
+    margin-bottom: 45px;
+}
+.main_04_01_list li span b{
+    font-weight: 700;
+}
+.main_04_01_list li p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.main_04_02_list li{
+    width: 20%;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 10px 30px;
+}
+.main_04_02_list li .img_area{
+    width: 200px;
+    height: 200px;
+    background-color: #a6a6a6;
+    margin-bottom: 20px;
+}
+.main_04_02_list li span{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+
+/* ---------------------------- Main_05 ---------------------------- */
+.main_05{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url('/assets/images/bg_main_05.png') no-repeat center center;
+}
+.main_05 .main_title_wrap .main_title{ margin-bottom: 40px;}
+
+.main_05 .contact_list{ 
+    width: 100%;
+    display: flex; 
+}
+.main_05 .contact_list>li{
+    width: 30%;
+    height: 310px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    display: inline-block;
+    margin: 0 2%;
+    padding: 35px 55px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.main_05 .contact_list li .contact_list_title{
+    width: 100%;
+    line-height: 60px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #221814;
+    display: block;
+    position: relative;
+}
+.main_05 .contact_list .contact_list_title::after{
+    content: '';
+    width: 25px;
+    height: 3px;
+    display: block;
+    background-color: #5791cc;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.center_list li{
+    font-size: 2rem;
+    line-height: 39px;
+    color: #221814;
+}
+.center_list li i{ 
+    vertical-align: middle;
+    margin-right: 20px;
+    font-style: normal;    
+}
+.center_list li i img{
+    vertical-align: text-top;
+}
+.center_list li.contact_info{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #4e4e4e;
+}
+.center_list li.contact_info{
+    line-height: 1.5;    
+}
+.center_list li.contact_info span i{
+    font-style: normal;
+    margin: 0 5px;
+}
+.center_list li.contact_info span b{
+    font-weight: 700;
+}
+
+
+.product_inquiry{ 
+    margin: 20px auto;
+}
+.inquiry a{
+    line-height: 1.9;
+}
+.inquiry a span{
+    display: block;
+    font-size: 1.3rem;
+    line-height: 0.5;
+}
+
+.board_list{ position: relative; }
+.board_list .btn_plus{
+    cursor: pointer;
+    position: absolute;
+    right: 65px;
+    top: 75px;
+}
+.board_list .notice_board{
+    width: 100%; 
+    box-sizing: border-box;
+    table-layout: fixed;
+}
+.notice_board tbody{ width: 100%; } 
+.notice_board tbody tr:hover{ color: #5791cc; }
+.notice_board, tr, th, td{ border: 0; }
+.notice_board tbody td{
+    padding: 12px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #dbdbdb;
+}
+.notice_board tbody td:nth-child(1){
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.notice_board tbody td:nth-child(2){
+    width: 30%;
+    text-align: center;
+}
+
+/* ------------------------------------------ Media Query Start ------------------------------------------ */
+@media screen and (min-width: 1921px){
+    /* header{
+        left: 50%;
+        transform: translate( -50%,0);
+    } */
+
+}
+/* 1024이하 : iPad */
+@media screen and (max-width: 1024px){
+    #wrap{ width: 100%; }
+    #container{ width: 100 !important; }
+
+    
+}
+/* 768이하 : iPad Retina */
+@media screen and (max-width: 768px){}
+/* 500이하 : Mobile */
+@media screen and (max-width: 500px){}
+/* 400 이하 */
+@media screen and (max-width: 400px){}
+/* 320이하 */
+@media screen and (max-width: 320px){}
+
+
+

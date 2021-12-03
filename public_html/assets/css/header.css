@@ -1,0 +1,185 @@
+@charset "utf-8";
+@import url(layout.css);
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: block;
+    -webkit-transition: all 0.3s ease-in-out;  
+    -moz-transition: all 0.3s ease-in-out;  
+    -ms-transition: all 0.3s ease-in-out;   
+    -o-transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;  
+    background-color: rgba(255, 255, 255, 0.3);      
+}
+
+.nav_wrap {  
+    width:100%;
+    position: relative; 
+}
+.nav_inner{ 
+    width:1600px; 
+    margin:0px auto; 
+    position: relative;  
+}
+.nav_inner:after{ 
+    content:''; 
+    display:block; 
+    clear:both; 
+}
+.nav_wrap .menu { 
+    width: 100%; 
+    height: 80px; 
+    margin: 0 auto; 
+    line-height: 80px; 
+    float:left; 
+    position: relative; 
+    z-index: 999; 
+}   
+/* 1차 메뉴 */
+.nav_wrap .menu .gnb { width: 100%; }
+/* GNB LOGO */
+.nav_wrap .menu .gnb li.gnb_logo{ 
+    float: left; 
+    margin-right: 8%;
+}
+.nav_wrap .menu .gnb li.hamburgur_btn{
+    float: right;
+    cursor: pointer;
+}
+.nav_wrap .menu .gnb li.gnb_logo h1 a img{ padding-top: 15px; }
+.nav_wrap .menu .gnb li.view { 
+    width: 10%;/*1차카테고리넓이*/ 
+    float: left; 
+    font-size: 18px;
+    text-align: center; 
+    color:#fff; 
+}
+.nav_wrap .menu .gnb li.view:after { 
+    display: block; 
+    clear: both; 
+    content: ''; 
+}
+/* 2차 메뉴 */
+.nav_wrap .menu .gnb li.view .depth { 
+    height: 220px; 
+    line-height: 35px; 
+    display:none; 
+    text-align:center; 
+    position: relative; 
+    z-index: 999; 
+    border-right: 1px solid #dddddd;
+}
+.nav_wrap .menu .gnb li.view .depth_01{ 
+    border-left: 1px solid #dddddd;
+}
+.nav_wrap .menu .gnb li.view a { 
+    color:#002b1a;  
+    font-weight:600;  
+    display: block; 
+    position: relative;   
+}
+.nav_wrap .menu .gnb li.view:hover > a::after {  
+    -webkit-transition: all 0.3s ease-in-out;  
+    -moz-transition: all 0.3s ease-in-out;  
+    -ms-transition: all 0.3s ease-in-out;  
+    -o-transition: all 0.3s ease-in-out;  
+    transition: all 0.3s ease-in-out; 
+    opacity: 1;  
+    visibility: visible; 
+    bottom: 0px;          
+}
+.nav_wrap .menu .gnb li.view a::after {  
+    content: '';   
+    width: 100%;   
+    height: 1px;    
+    background-color: #5791cc;/*상단 카테고리바 색상*/
+    opacity: 0;   
+    visibility: hidden;  
+    -webkit-transition: all 0.3s ease-in-out;  
+    -moz-transition: all 0.3s ease-in-out;  
+    -ms-transition: all 0.3s ease-in-out;   
+    -o-transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;            
+    position: absolute; 
+    left: 50%;
+    transform: translate(-50%);  
+    bottom: 11px;  
+}
+.nav_wrap .menu .gnb li.view .depth li a { 
+    font-size: 16px;  
+    font-weight: 300; 
+    color:#444; }/*중분류*/
+.nav_wrap .menu .gnb li.view .depth li a:hover {   
+    color:#fff;/*마우스 오버시 색상변경*/
+    background-color: #5791cc;
+}
+
+/*****.header .nav_wrap.on 메뉴고정!!******/
+.nav_wrap.on {  background-color:#fff; z-index: 1000; }
+.nav_wrap .menu_bg { 
+    width: 100%; 
+    height: 230px; 
+    display:none; 
+    background-color:rgba(255, 255, 255, 1);  
+    border-top: 1px solid #e4e4e4; 
+    border-bottom: 1px solid #e4e4e4;
+    position: absolute; 
+    top:80px; 
+    left:0%; 
+    z-index:9; 
+}
+
+/* 상단 FIXED 메뉴 */
+#fixed_menu {
+    width:100%;
+    min-width:1150px; 
+    height:80px; 
+    margin:0 auto; 
+    background-color: rgba(255, 255, 255, 0.5);
+    position:relative;
+    z-index:98; 
+}
+
+.site_map_layer{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color:rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: fixed;
+    z-index: 9999;
+}
+.site_map_layer span{ 
+    display: block;
+    cursor: pointer; 
+}
+
+
+
+
+/* ------------------------------------------ Media Query Start ------------------------------------------ */ 
+
+
+/* 1024이하 : iPad */
+@media screen and (max-width: 1024px){
+    header{ width: 100%; }
+    .nav_wrap .menu .gnb li.view{ display: none; }
+    .menu_bg{ display: none !important; visibility: hidden; overflow: hidden; }
+    .nav_wrap .menu .gnb li.hamburgur_btn{ float: none; }
+
+    
+}
+/* 768이하 : iPad Retina */
+@media screen and (max-width: 768px){}
+/* 500이하 : Mobile */
+@media screen and (max-width: 500px){}
+/* 400 이하 */
+@media screen and (max-width: 400px){}
+/* 320이하 */
+@media screen and (max-width: 320px){}
+
+
+

@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+
+
+
+
+/* ------------------------------------------ Media Query Start ------------------------------------------ */
+@media screen and (min-width: 1921px){
+
+}
+@media screen and (max-width: 1920px){
+    #wrap{
+        width: 100vw;
+    }
+}
+/* 1500이하 */
+@media screen and (max-width: 1500px){}
+/* 1366이하 : iPad pro 12.9인치 & Laptop */
+@media screen and (max-width: 1366px){}
+/* 1280이하 : iPad */
+@media screen and (max-width: 1280px){}
+/* 1024이하 : iPad */
+@media screen and (max-width: 1024px){}
+/* 991이하 : iPad */
+@media screen and (max-width: 991px){}
+/* 768이하 : iPad Retina */
+@media screen and (max-width: 768px){}
+/* 500이하 : Mobile */
+@media screen and (max-width: 500px){}
+/* 400 이하 */
+@media screen and (max-width: 400px){}
+/* 320이하 */
+@media screen and (max-width: 320px){}
+
+
+
